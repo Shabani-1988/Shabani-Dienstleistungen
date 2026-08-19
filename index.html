@@ -1,539 +1,466 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Shabani Dienstleistungen | Marbach am Neckar</title>
-  <meta name="description" content="Shabani Dienstleistungen in Marbach am Neckar: Gebäudereinigung, Hausmeisterservice, Gartenpflege und Sonderreinigungen. Einsatzgebiet ca. 15 km rund um Marbach.">
+<title>Shabani Dienstleistungen | Marbach am Neckar</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --lila: #35105d;
+    --lila2: #542789;
+    --gruen: #4c8c18;
+    --grau: #444;
+    --hell: #f7f7f7;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    color: #222;
+    line-height: 1.55;
+}
+
+.page {
+    max-width: 1200px;
+    margin: auto;
+    background: white;
+}
+
+/* KOPFBEREICH */
+
+header {
+    position: relative;
+    padding: 45px 6% 35px;
+    border-bottom: 4px solid var(--lila);
+    overflow: hidden;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    right: -100px;
+    top: -150px;
+    border-radius: 50%;
+    background: var(--lila);
+    opacity: .08;
+}
+
+.top {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.brand {
+    text-align: center;
+}
+
+.brand-name {
+    color: var(--lila);
+    font-size: clamp(42px, 6vw, 72px);
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.brand-sub {
+    color: #444;
+    font-size: clamp(17px, 2vw, 25px);
+    font-weight: 700;
+    letter-spacing: 7px;
+}
+
+.slogan {
+    margin-top: 8px;
+    color: var(--gruen);
+    font-size: 25px;
+    font-style: italic;
+}
+
+.headline {
+    color: var(--lila);
+    font-size: clamp(46px, 7vw, 82px);
+    font-weight: 900;
+    line-height: .98;
+    text-transform: uppercase;
+}
+
+.green-line {
+    width: 70%;
+    height: 6px;
+    background: var(--gruen);
+    margin-top: 25px;
+    border-radius: 20px;
+}
+
+/* LEISTUNGEN */
+
+.services {
+    padding: 55px 6%;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px 65px;
+}
+
+.service {
+    position: relative;
+}
+
+.service-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 3px solid var(--lila);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.icon {
+    width: 75px;
+    height: 75px;
+    min-width: 75px;
+    border-radius: 50%;
+    background: var(--lila);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.service h2 {
+    color: var(--lila);
+    font-size: 28px;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.service.green .icon {
+    background: var(--gruen);
+}
+
+.service.green h2 {
+    color: var(--gruen);
+}
+
+.service.green .service-title {
+    border-color: var(--gruen);
+}
+
+.service ul {
+    padding-left: 30px;
+    font-size: 19px;
+}
+
+.service li {
+    margin: 8px 0;
+}
+
+.service li::marker {
+    color: var(--lila);
+}
+
+.service.green li::marker {
+    color: var(--gruen);
+}
+
+/* WARUM WIR */
+
+.why {
+    padding: 20px 6% 45px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    color: var(--lila);
+    font-size: 28px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.section-heading::before,
+.section-heading::after {
+    content: "";
+    height: 3px;
+    background: var(--lila);
+    flex: 1;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.why-item {
+    text-align: center;
+    padding: 15px;
+    border-right: 1px solid #bbb;
+}
+
+.why-item:last-child {
+    border-right: 0;
+}
+
+.why-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    background: var(--lila);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.why-item h3 {
+    color: var(--lila);
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.why-item p {
+    font-size: 14px;
+}
+
+/* KONTAKT */
+
+.contact {
+    border-top: 3px solid var(--lila);
+    padding: 28px 6%;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    align-items: center;
+    gap: 30px;
+}
+
+.offer {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: var(--lila);
+    font-weight: 900;
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+.phone-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: var(--lila);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+.contact-details {
+    border-left: 2px solid #aaa;
+    padding-left: 35px;
+}
+
+.contact-details a {
+    display: block;
+    color: var(--lila);
+    text-decoration: none;
+    font-weight: 800;
+    margin: 4px 0;
+}
+
+.phone {
+    font-size: clamp(28px, 4vw, 43px);
+}
+
+.email {
+    font-size: clamp(16px, 2.2vw, 25px);
+}
+
+footer {
+    background: var(--lila);
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+/* HANDY */
+
+@media (max-width: 800px) {
+
+    .top,
+    .service-grid,
+    .contact {
+        grid-template-columns: 1fr;
     }
 
-    html {
-      scroll-behavior: smooth;
+    .top {
+        text-align: center;
     }
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: #252525;
-      background: #ffffff;
-      line-height: 1.6;
+    .green-line {
+        margin: 20px auto 0;
     }
 
-    :root {
-      --lila: #35105d;
-      --lila-hell: #5d2789;
-      --gruen: #4c8c18;
-      --hell: #f7f7f7;
-    }
-
-    header {
-      background: #fff;
-      padding: 18px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 12px rgba(0,0,0,.08);
-    }
-
-    .logo-text {
-      color: var(--lila);
-      font-size: 24px;
-      font-weight: 800;
-    }
-
-    .logo-text span {
-      color: var(--gruen);
-    }
-
-    nav a {
-      color: var(--lila);
-      text-decoration: none;
-      margin-left: 22px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: var(--gruen);
-    }
-
-    .hero {
-      min-height: 620px;
-      display: flex;
-      align-items: center;
-      padding: 80px 8%;
-      background:
-        linear-gradient(120deg, rgba(53,16,93,.96), rgba(75,25,116,.90));
-      color: white;
-    }
-
-    .hero-content {
-      max-width: 760px;
-    }
-
-    .hero-small {
-      color: #b5dd82;
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 12px;
-    }
-
-    h1 {
-      font-size: clamp(42px, 7vw, 72px);
-      line-height: 1.05;
-      margin-bottom: 22px;
-    }
-
-    .hero h1 span {
-      color: #9bc85c;
-    }
-
-    .hero p {
-      font-size: 21px;
-      max-width: 680px;
-      margin-bottom: 32px;
-    }
-
-    .button {
-      display: inline-block;
-      background: var(--gruen);
-      color: white;
-      padding: 15px 25px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 5px 8px 5px 0;
-    }
-
-    .button:hover {
-      background: #3d7212;
-    }
-
-    .button-light {
-      background: white;
-      color: var(--lila);
-    }
-
-    section {
-      padding: 75px 8%;
-    }
-
-    .section-title {
-      text-align: center;
-      color: var(--lila);
-      font-size: 38px;
-      margin-bottom: 12px;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      max-width: 750px;
-      margin: 0 auto 45px;
-      color: #666;
-    }
-
-    .services {
-      background: var(--hell);
-    }
-
-    .cards {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 14px;
-      padding: 30px;
-      box-shadow: 0 5px 20px rgba(0,0,0,.07);
-      border-top: 5px solid var(--lila);
-    }
-
-    .card.green {
-      border-top-color: var(--gruen);
-    }
-
-    .card h3 {
-      color: var(--lila);
-      font-size: 24px;
-      margin-bottom: 15px;
-    }
-
-    .card.green h3 {
-      color: var(--gruen);
-    }
-
-    .card ul {
-      padding-left: 20px;
-    }
-
-    .card li {
-      margin: 8px 0;
+    .service-grid {
+        gap: 45px;
     }
 
     .why-grid {
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 18px;
-    }
-
-    .why {
-      text-align: center;
-      padding: 24px 12px;
-    }
-
-    .why .icon {
-      width: 60px;
-      height: 60px;
-      margin: 0 auto 15px;
-      border-radius: 50%;
-      background: var(--lila);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-    }
-
-    .why h3 {
-      color: var(--lila);
-      font-size: 17px;
-      margin-bottom: 8px;
-    }
-
-    .area {
-      background: var(--lila);
-      color: white;
-      text-align: center;
-    }
-
-    .area h2 {
-      font-size: 38px;
-      margin-bottom: 18px;
-    }
-
-    .area p {
-      font-size: 20px;
-      max-width: 750px;
-      margin: auto;
-    }
-
-    .contact {
-      text-align: center;
-    }
-
-    .contact-box {
-      max-width: 800px;
-      margin: 30px auto 0;
-      padding: 35px;
-      border-radius: 15px;
-      background: var(--hell);
-    }
-
-    .contact-box p {
-      margin: 13px 0;
-      font-size: 19px;
-    }
-
-    .contact-box a {
-      color: var(--lila);
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    footer {
-      background: #210a3a;
-      color: white;
-      text-align: center;
-      padding: 28px 20px;
-    }
-
-    footer p {
-      margin: 5px;
-    }
-
-    @media (max-width: 850px) {
-      header {
-        display: block;
-        text-align: center;
-      }
-
-      nav {
-        margin-top: 12px;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 5px 7px;
-      }
-
-      .cards {
         grid-template-columns: 1fr;
-      }
-
-      .why-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .hero {
-        min-height: 550px;
-      }
     }
 
-    @media (max-width: 500px) {
-      .why-grid {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 55px 6%;
-      }
+    .why-item {
+        border-right: 0;
+        border-bottom: 1px solid #ddd;
+        padding: 22px 10px;
     }
-  </style>
+
+    .contact-details {
+        border-left: 0;
+        border-top: 2px solid #aaa;
+        padding: 25px 0 0;
+    }
+
+    .service h2 {
+        font-size: 23px;
+    }
+
+    .service ul {
+        font-size: 17px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<header>
-<img src="LOGO.jpeg" alt="Shabani
-Dienstleistungen" style="height:240px;
-width:auto;">
-  
-  
+<div class="page">
 
-  <nav>
-    <a href="#start">Start</a>
-    <a href="#leistungen">Leistungen</a>
-    <a href="#warum">Warum wir?</a>
-    <a href="#kontakt">Kontakt</a>
-  </nav>
+<header>
+    <div class="top">
+
+        <div class="brand">
+            <div class="brand-name">SHABANI</div>
+            <div class="brand-sub">DIENSTLEISTUNGEN</div>
+            <div class="slogan">Alles aus einer Hand!</div>
+        </div>
+
+        <div>
+            <div class="headline">
+                Unsere<br>
+                Leistungen
+            </div>
+            <div class="green-line"></div>
+        </div>
+
+    </div>
 </header>
 
 
-<section class="hero" id="start">
-  <div class="hero-content">
+<main class="services">
 
-    <div class="hero-small">
-      Ihr zuverlässiger Partner für Haus, Hof und Gewerbe
-    </div>
+<div class="service-grid">
 
-    <h1>
-      Alles aus <span>einer Hand.</span>
-    </h1>
+    <section class="service">
+        <div class="service-title">
+            <div class="icon">▦</div>
+            <h2>Gebäudereinigung</h2>
+        </div>
 
-    <p>
-      Professionelle Gebäudereinigung, Hausmeisterservice,
-      Garten- und Außenanlagenpflege sowie Sonderreinigungen
-      in Marbach am Neckar und Umgebung.
-    </p>
-
-    <a class="button" href="tel:+491773734116">
-      Jetzt anrufen
-    </a>
-
-    <a class="button button-light"
-       href="mailto:dienstleistungen.shabani@gmail.com">
-      Kostenloses Angebot
-    </a>
-
-  </div>
-</section>
+        <ul>
+            <li>Büro- und Praxisreinigung</li>
+            <li>Treppenhausreinigung</li>
+            <li>Unterhaltsreinigung</li>
+            <li>Grundreinigung</li>
+            <li>Bauendreinigung</li>
+            <li>Glas- und Fensterreinigung</li>
+            <li>Reinigung von Eingangsbereichen</li>
+            <li>Sanitärreinigung</li>
+            <li>Küchen- und Pausenraumreinigung</li>
+        </ul>
+    </section>
 
 
-<section class="services" id="leistungen">
+    <section class="service">
+        <div class="service-title">
+            <div class="icon">⌂</div>
+            <h2>Hausmeisterservice</h2>
+        </div>
 
-  <h2 class="section-title">Unsere Leistungen</h2>
-
-  <p class="section-subtitle">
-    Zuverlässige Dienstleistungen für private Haushalte,
-    Unternehmen und öffentliche Einrichtungen.
-  </p>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>Gebäudereinigung</h3>
-      <ul>
-        <li>Büro- und Praxisreinigung</li>
-        <li>Treppenhausreinigung</li>
-        <li>Unterhaltsreinigung</li>
-        <li>Grundreinigung</li>
-        <li>Bauendreinigung</li>
-        <li>Glas- und Fensterreinigung</li>
-        <li>Reinigung von Eingangsbereichen</li>
-        <li>Sanitärreinigung</li>
-        <li>Küchen- und Pausenraumreinigung</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Hausmeisterservice</h3>
-      <ul>
-        <li>Kontrolle und Pflege von Gemeinschaftsflächen</li>
-        <li>Mülltonnenservice</li>
-        <li>Winterdienst nach Vereinbarung</li>
-        <li>Objektkontrollen</li>
-      </ul>
-    </div>
-
-    <div class="card green">
-      <h3>Garten- & Außenanlagenpflege</h3>
-      <ul>
-        <li>Rasenmähen</li>
-        <li>Heckenschnitt</li>
-        <li>Unkrautentfernung</li>
-        <li>Laubbeseitigung</li>
-        <li>Pflege von Grünanlagen</li>
-        <li>Reinigung von Gehwegen und Hofflächen</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Sonderreinigungen auf Anfrage</h3>
-      <ul>
-        <li>Teppich- und Polsterreinigung</li>
-        <li>Fassadenreinigung</li>
-        <li>Graffitientfernung</li>
-        <li>Desinfektionsreinigung</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
+        <ul>
+            <li>Kontrolle und Pflege von Gemeinschaftsflächen</li>
+            <li>Mülltonnenservice</li>
+            <li>Winterdienst (nach Vereinbarung)</li>
+            <li>Objektkontrollen</li>
+        </ul>
+    </section>
 
 
-<section id="warum">
+    <section class="service green">
+        <div class="service-title">
+            <div class="icon">❧</div>
+            <h2>Garten- und<br>Außenanlagenpflege</h2>
+        </div>
 
-  <h2 class="section-title">Warum Shabani Dienstleistungen?</h2>
-
-  <p class="section-subtitle">
-    Persönlicher Service, sorgfältige Arbeit und faire Konditionen.
-  </p>
-
-  <div class="why-grid">
-
-    <div class="why">
-      <div class="icon">✓</div>
-      <h3>Zuverlässig & termintreu</h3>
-      <p>Wir halten, was wir versprechen.</p>
-    </div>
-
-    <div class="why">
-      <div class="icon">✦</div>
-      <h3>Gründlich & sorgfältig</h3>
-      <p>Sauberkeit bis ins Detail.</p>
-    </div>
-
-    <div class="why">
-      <div class="icon">◷</div>
-      <h3>Flexible Termine</h3>
-      <p>Individuelle Termine nach Ihren Bedürfnissen.</p>
-    </div>
-
-    <div class="why">
-      <div class="icon">€</div>
-      <h3>Faire Preise</h3>
-      <p>Transparente Konditionen und starke Leistung.</p>
-    </div>
-
-    <div class="why">
-      <div class="icon">♟</div>
-      <h3>Privat & Gewerbe</h3>
-      <p>Für Haushalte, Unternehmen und Einrichtungen.</p>
-    </div>
-
-  </div>
-</section>
+        <ul>
+            <li>Rasenmähen</li>
+            <li>Heckenschnitt</li>
+            <li>Unkrautentfernung</li>
+            <li>Laubbeseitigung</li>
+            <li>Pflege von Grünanlagen</li>
+            <li>Reinigung von Gehwegen und Hofflächen</li>
+        </ul>
+    </section>
 
 
-<section class="area">
+    <section class="service">
+        <div class="service-title">
+            <div class="icon">✦</div>
+            <h2>Sonderreinigungen<br>auf Anfrage</h2>
+        </div>
 
-  <h2>Marbach am Neckar & Umgebung</h2>
+        <ul>
+            <li>Teppich- und Polsterreinigung</li>
+            <li>Fassadenreinigung</li>
+            <li>Graffitientfernung</li>
+            <li>Desinfektionsreinigung</li>
+        </ul>
+    </section>
 
-  <p>
-    Wir sind für unsere Kunden in Marbach am Neckar
-    und in einem Umkreis von ca. 15 km im Einsatz.
-    Fragen Sie uns gerne an, ob wir auch zu Ihnen kommen.
-  </p>
-
-</section>
-
-
-<section class="contact" id="kontakt">
-
-  <h2 class="section-title">
-    Kostenlose Besichtigung & unverbindliches Angebot
-  </h2>
-
-  <p class="section-subtitle">
-    Sie benötigen Unterstützung bei Reinigung,
-    Hausmeisterservice oder Außenanlagenpflege?
-    Kontaktieren Sie uns.
-  </p>
-
-  <div class="contact-box">
-
-    <p>
-      <strong>Shabani Dienstleistungen</strong>
-    </p>
-
-    <p>
-      📍 Marbach am Neckar & ca. 15 km Umgebung
-    </p>
-
-    <p>
-      📞
-      <a href="tel:+491773734116">
-        0177 3734116
-      </a>
-    </p>
-
-    <p>
-      ✉️
-      <a href="mailto:dienstleistungen.shabani@gmail.com">
-        dienstleistungen.shabani@gmail.com
-      </a>
-    </p>
-
-    <br>
-
-    <a class="button" href="tel:+491773734116">
-      Jetzt kostenlos anfragen
-    </a>
-
-  </div>
-
-</section>
+</div>
+</main>
 
 
-<footer>
+<section class="why">
 
-  <p>
-    <strong>Shabani Dienstleistungen</strong>
-  </p>
+    <div class="section-heading">Warum wir?</div>
 
-  <p>
-    Marbach am Neckar und Umgebung
-  </p>
+    <div class="why-grid">
 
-  <p>
-    © 2026 Shabani Dienstleistungen
-  </p>
+        <div class="why-item">
+            <div class="why-icon">✓</div>
+            <h3>Zuverlässig und termintreu</h3>
+            <p>Wir halten, was wir versprechen.</p>
+        </div>
 
-</footer>
-
-</body>
-</html>
+        <div class="why-item">
