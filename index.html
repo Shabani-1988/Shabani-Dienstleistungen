@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Shabani Dienstleistungen | Marbach am Neckar</title>
+  <meta name="description" content="Shabani Dienstleistungen in Marbach am Neckar: Gebäudereinigung, Hausmeisterservice, Gartenpflege und Sonderreinigungen. Einsatzgebiet ca. 15 km rund um Marbach.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #252525;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    :root {
+      --lila: #35105d;
+      --lila-hell: #5d2789;
+      --gruen: #4c8c18;
+      --hell: #f7f7f7;
+    }
+
+    header {
+      background: #fff;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,.08);
+    }
+
+    .logo-text {
+      color: var(--lila);
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    .logo-text span {
+      color: var(--gruen);
+    }
+
+    nav a {
+      color: var(--lila);
+      text-decoration: none;
+      margin-left: 22px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--gruen);
+    }
+
+    .hero {
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      padding: 80px 8%;
+      background:
+        linear-gradient(120deg, rgba(53,16,93,.96), rgba(75,25,116,.90));
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .hero-small {
+      color: #b5dd82;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: #9bc85c;
+    }
+
+    .hero p {
+      font-size: 21px;
+      max-width: 680px;
+      margin-bottom: 32px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--gruen);
+      color: white;
+      padding: 15px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px 8px 5px 0;
+    }
+
+    .button:hover {
+      background: #3d7212;
+    }
+
+    .button-light {
+      background: white;
+      color: var(--lila);
+    }
+
+    section {
+      padding: 75px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      color: var(--lila);
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 45px;
+      color: #666;
+    }
+
+    .services {
+      background: var(--hell);
+    }
+
+    .cards {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.07);
+      border-top: 5px solid var(--lila);
+    }
+
+    .card.green {
+      border-top-color: var(--gruen);
+    }
+
+    .card h3 {
+      color: var(--lila);
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .card.green h3 {
+      color: var(--gruen);
+    }
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    .card li {
+      margin: 8px 0;
+    }
+
+    .why-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+    }
+
+    .why {
+      text-align: center;
+      padding: 24px 12px;
+    }
+
+    .why .icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: var(--lila);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+    }
+
+    .why h3 {
+      color: var(--lila);
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .area {
+      background: var(--lila);
+      color: white;
+      text-align: center;
+    }
+
+    .area h2 {
+      font-size: 38px;
+      margin-bottom: 18px;
+    }
+
+    .area p {
+      font-size: 20px;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact-box {
+      max-width: 800px;
+      margin: 30px auto 0;
+      padding: 35px;
+      border-radius: 15px;
+      background: var(--hell);
+    }
+
+    .contact-box p {
+      margin: 13px 0;
+      font-size: 19px;
+    }
+
+    .contact-box a {
+      color: var(--lila);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #210a3a;
+      color: white;
+      text-align: center;
+      padding: 28px 20px;
+    }
+
+    footer p {
+      margin: 5px;
+    }
+
+    @media (max-width: 850px) {
+      header {
+        display: block;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 12px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 7px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero {
+        min-height: 550px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 55px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-text">
+    SHABANI <span>DIENSTLEISTUNGEN</span>
+  </div>
+
+  <nav>
+    <a href="#start">Start</a>
+    <a href="#leistungen">Leistungen</a>
+    <a href="#warum">Warum wir?</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+
+<section class="hero" id="start">
+  <div class="hero-content">
+
+    <div class="hero-small">
+      Ihr zuverlässiger Partner für Haus, Hof und Gewerbe
+    </div>
+
+    <h1>
+      Alles aus <span>einer Hand.</span>
+    </h1>
+
+    <p>
+      Professionelle Gebäudereinigung, Hausmeisterservice,
+      Garten- und Außenanlagenpflege sowie Sonderreinigungen
+      in Marbach am Neckar und Umgebung.
+    </p>
+
+    <a class="button" href="tel:+491773734116">
+      Jetzt anrufen
+    </a>
+
+    <a class="button button-light"
+       href="mailto:dienstleistungen.shabani@gmail.com">
+      Kostenloses Angebot
+    </a>
+
+  </div>
+</section>
+
+
+<section class="services" id="leistungen">
+
+  <h2 class="section-title">Unsere Leistungen</h2>
+
+  <p class="section-subtitle">
+    Zuverlässige Dienstleistungen für private Haushalte,
+    Unternehmen und öffentliche Einrichtungen.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Gebäudereinigung</h3>
+      <ul>
+        <li>Büro- und Praxisreinigung</li>
+        <li>Treppenhausreinigung</li>
+        <li>Unterhaltsreinigung</li>
+        <li>Grundreinigung</li>
+        <li>Bauendreinigung</li>
+        <li>Glas- und Fensterreinigung</li>
+        <li>Reinigung von Eingangsbereichen</li>
+        <li>Sanitärreinigung</li>
+        <li>Küchen- und Pausenraumreinigung</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Hausmeisterservice</h3>
+      <ul>
+        <li>Kontrolle und Pflege von Gemeinschaftsflächen</li>
+        <li>Mülltonnenservice</li>
+        <li>Winterdienst nach Vereinbarung</li>
+        <li>Objektkontrollen</li>
+      </ul>
+    </div>
+
+    <div class="card green">
+      <h3>Garten- & Außenanlagenpflege</h3>
+      <ul>
+        <li>Rasenmähen</li>
+        <li>Heckenschnitt</li>
+        <li>Unkrautentfernung</li>
+        <li>Laubbeseitigung</li>
+        <li>Pflege von Grünanlagen</li>
+        <li>Reinigung von Gehwegen und Hofflächen</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Sonderreinigungen auf Anfrage</h3>
+      <ul>
+        <li>Teppich- und Polsterreinigung</li>
+        <li>Fassadenreinigung</li>
+        <li>Graffitientfernung</li>
+        <li>Desinfektionsreinigung</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="warum">
+
+  <h2 class="section-title">Warum Shabani Dienstleistungen?</h2>
+
+  <p class="section-subtitle">
+    Persönlicher Service, sorgfältige Arbeit und faire Konditionen.
+  </p>
+
+  <div class="why-grid">
+
+    <div class="why">
+      <div class="icon">✓</div>
+      <h3>Zuverlässig & termintreu</h3>
+      <p>Wir halten, was wir versprechen.</p>
+    </div>
+
+    <div class="why">
+      <div class="icon">✦</div>
+      <h3>Gründlich & sorgfältig</h3>
+      <p>Sauberkeit bis ins Detail.</p>
+    </div>
+
+    <div class="why">
+      <div class="icon">◷</div>
+      <h3>Flexible Termine</h3>
+      <p>Individuelle Termine nach Ihren Bedürfnissen.</p>
+    </div>
+
+    <div class="why">
+      <div class="icon">€</div>
+      <h3>Faire Preise</h3>
+      <p>Transparente Konditionen und starke Leistung.</p>
+    </div>
+
+    <div class="why">
+      <div class="icon">♟</div>
+      <h3>Privat & Gewerbe</h3>
+      <p>Für Haushalte, Unternehmen und Einrichtungen.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="area">
+
+  <h2>Marbach am Neckar & Umgebung</h2>
+
+  <p>
+    Wir sind für unsere Kunden in Marbach am Neckar
+    und in einem Umkreis von ca. 15 km im Einsatz.
+    Fragen Sie uns gerne an, ob wir auch zu Ihnen kommen.
+  </p>
+
+</section>
+
+
+<section class="contact" id="kontakt">
+
+  <h2 class="section-title">
+    Kostenlose Besichtigung & unverbindliches Angebot
+  </h2>
+
+  <p class="section-subtitle">
+    Sie benötigen Unterstützung bei Reinigung,
+    Hausmeisterservice oder Außenanlagenpflege?
+    Kontaktieren Sie uns.
+  </p>
+
+  <div class="contact-box">
+
+    <p>
+      <strong>Shabani Dienstleistungen</strong>
+    </p>
+
+    <p>
+      📍 Marbach am Neckar & ca. 15 km Umgebung
+    </p>
+
+    <p>
+      📞
+      <a href="tel:+491773734116">
+        0177 3734116
+      </a>
+    </p>
+
+    <p>
+      ✉️
+      <a href="mailto:dienstleistungen.shabani@gmail.com">
+        dienstleistungen.shabani@gmail.com
+      </a>
+    </p>
+
+    <br>
+
+    <a class="button" href="tel:+491773734116">
+      Jetzt kostenlos anfragen
+    </a>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <p>
+    <strong>Shabani Dienstleistungen</strong>
+  </p>
+
+  <p>
+    Marbach am Neckar und Umgebung
+  </p>
+
+  <p>
+    © 2026 Shabani Dienstleistungen
+  </p>
+
+</footer>
+
+</body>
+</html>
