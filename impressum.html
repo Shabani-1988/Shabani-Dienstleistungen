@@ -3,27 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Impressum | Shabani Dienstleistungen</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f3ff;
+      color: #171717;
+    }
+
+    .header {
+      background: #ffffff;
+      padding: 22px 30px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .header-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 800;
+      color: #6d28d9;
+      text-decoration: none;
+    }
+
+    .main {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 24px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 45px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 42px;
+      color: #6d28d9;
+    }
+
+    h2 {
+      margin-top: 30px;
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    a {
+      color: #6d28d9;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 22px;
+      background: #6d28d9;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    .notice {
+      margin-top: 30px;
+      padding: 16px;
+      background: #f3edff;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .main {
+        margin: 30px auto;
+      }
+
+      .card {
+        padding: 28px 22px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-  <h1>Impressum</h1>
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">SHABANI DIENSTLEISTUNGEN</a>
+    </div>
+  </header>
 
-  <p>
-    <strong>Shabani Dienstleistungen</strong><br>
-    Inhaber: Ibrahim Shabani<br>
-    Telefon: 0177 3734116<br>
-    E-Mail: dienstleistungen.shabani@gmail.com
-  </p>
+  <main class="main">
+    <div class="card">
 
-  <p>
-    Wirtschafts-Identifikationsnummer:<br>
-    DE463936111
-  </p>
+      <h1>Impressum</h1>
 
-  <p>
-    Anschrift wird ergänzt.
-  </p>
+      <h2>Angaben zum Anbieter</h2>
 
-</body>
-</html>
+      <p>
+        <strong>Shabani Dienstleistungen</strong><br>
+        Inhaber: Ibrahim Shabani
+      </p>
+
+      <p>
+        <strong>Telefon:</strong>
+        <a href="tel:+491773734116">0177 3734116</a><br>
+
+        <strong>E-Mail:</strong>
+        <a href="mailto:dienstleistungen.shabani@gmail.com">
+          dienstleistungen.shabani@gmail.com
+        </a>
+      </p>
+
+      <h2>Wirtschafts-Identifikationsnummer</h2>
+
+      <p>
+        Wirtschafts-Identifikationsnummer gemäß § 139c AO:<br>
+        DE463936111
+      </p>
+
+      <div class="notice">
+        <strong>Anschrift:</strong> wird ergänzt.
+      </div>
+
+      <a class="back-button" href="index.html">
+        Zurück zur Startseite
+      </a>
