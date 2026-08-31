@@ -459,7 +459,41 @@
     }
  .service-title-left {
    text-align: left;
- }
+ }.mobile-contact-bar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-contact-bar {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        background: white;
+        box-shadow: 0 -2px 12px rgba(0,0,0,0.15);
+    }
+
+    .mobile-contact-bar a {
+        flex: 1;
+        padding: 14px 5px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 14px;
+        color: #4b0082;
+        border-right: 1px solid #ddd;
+    }
+
+    .mobile-contact-bar a:last-child {
+        border-right: none;
+    }
+
+    body {
+        padding-bottom: 60px;
+    }
+}
   </style>
 </head>
 
@@ -699,6 +733,12 @@
   <footer>
   © 2026 Shabani Dienstleistungen · Marbach am Neckar. <a href="impressum.html">Impressum</a>
 </footer>
-
+<div class="mobile-contact-bar">
+  <a href="tel:+491773734116">☎️
+Anrufen</a>
+  <a href="https://wa.me/491773734116">
+💬 WhatsApp</a>
+      <a href="kontakt">✉️ Angebot</a>
+</div>
 </body>
 </html>
