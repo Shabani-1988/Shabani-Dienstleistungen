@@ -1,35 +1,6 @@
 ,<!DOCTYPE html>
 <html lang="de">
-<head><!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18328652460"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18328652460');
-</script>
-<!-- Event snippet for Click-to-Call (1) conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-18328652460/YLlcCMrb0PQcEKyV5KNE',
-      'value': 1.0,
-      'currency': 'EUR',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
-
-
-  
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -47,7 +18,7 @@ function gtag_report_conversion(url) {
   "email": "dienstleistungen.shabani@gmail.com",
   "description": "Professionelle Gebäudereinigung, Unterhaltsreinigung, Büro- und Praxisreinigung, Haushaltsreinigung, Grundreinigung, Glas- und Fensterreinigung sowie Hausmeisterservice in Marbach am Neckar und Umgebung.",
   
-    "areaServed": [
+    ""areaServed": [
   { "@type": "City", "name": "Marbach am Neckar" },
   { "@type": "City", "name": "Benningen am Neckar" },
   { "@type": "City", "name": "Erdmannhausen" },
@@ -538,7 +509,7 @@ function gtag_report_conversion(url) {
         <a href="#kontakt">Kontakt</a>
       </div>
 
-      <a class="call-btn" href="tel:+491773734116" onclick="return gtag_report_conversion('tel:+491773734116')>☎ Jetzt anrufen</a>
+      <a class="call-btn" href="tel:+491773734116">☎ Jetzt anrufen</a>
     </nav>
   </div>
 </header>
@@ -576,7 +547,6 @@ function gtag_report_conversion(url) {
         <a href="https://wa.me/491773734116?text=Hallo%20Shabani%20Dienstleistungen%2C%20ich
           %20h%C3%A4tte%20gerne%20ein%20kostenloses
           %20und%20unverbindliches%20Angebot."
-          onlick="return gtag_report_conversion(this.href);"
           class="btn-secondary">
              💬 WhatsApp
         </a>
